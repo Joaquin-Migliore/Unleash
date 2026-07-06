@@ -325,6 +325,7 @@ function show(n){
 function next(){show(idx+1);}
 function prev(){show(idx-1);}
 
+  
 document.addEventListener('keydown',function(e){
   if(['ArrowRight','ArrowDown',' ','PageDown'].indexOf(e.key)>-1){e.preventDefault();next();}
   else if(['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key)>-1){e.preventDefault();prev();}
