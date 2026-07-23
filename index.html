@@ -35,7 +35,7 @@
   .slide.active [data-r]{animation:rise .75s ease forwards}
 
   #s0{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,6rem);align-items:center}
-  #s0 .about{max-width:38ch}
+  #s0 .about{max-width:54ch}
   #s0 .name{font-weight:500;line-height:.92;font-size:var(--step-name);margin:.35rem 0 .1rem;opacity:0;transform:translateY(16px)}
   #s0.active .name{animation:rise .8s .2s ease forwards}
   #s0 .role{font-size:var(--step-body);font-weight:500;color:var(--pine-100);opacity:0;transform:translateY(14px)}
@@ -46,11 +46,11 @@
   #s0 .fact:nth-child(1){animation-delay:.5s}#s0 .fact:nth-child(2){animation-delay:.6s}#s0 .fact:nth-child(3){animation-delay:.7s}#s0 .fact:nth-child(4){animation-delay:.8s}
   #s0 .connect{display:flex;align-items:center;gap:1.5rem;margin-top:1.6rem;opacity:0;transform:translateY(14px)}
   #s0.active .connect{animation:rise .9s .95s ease forwards}
-  #s0 .qr{width:clamp(190px,19vw,260px);aspect-ratio:1;flex:none;background:var(--cloud);padding:12px;border-radius:20px;border:2px solid rgba(10,33,31,.18);box-shadow:0 18px 40px -24px rgba(10,33,31,.5)}
+  #s0 .qr{width:clamp(184px,17.5vw,240px);aspect-ratio:1;flex:none;background:var(--cloud);padding:12px;border-radius:20px;border:2px solid rgba(10,33,31,.18);box-shadow:0 18px 40px -24px rgba(10,33,31,.5)}
   #s0 .qr svg{width:100%;height:100%;display:block}
   #s0 .connect-label{display:flex;flex-direction:column;gap:.35rem}
-  #s0 .eyebrow-inline{font-size:clamp(.85rem,1.15vw,1.2rem);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pine)}
-  #s0 .connect-sub{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.05rem,1.5vw,1.5rem);color:var(--leaf-300);line-height:1.25;max-width:20ch}
+  #s0 .eyebrow-inline{font-size:clamp(.85rem,1.15vw,1.2rem);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--pine);white-space:nowrap}
+  #s0 .connect-sub{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.05rem,1.5vw,1.5rem);color:var(--leaf-300);line-height:1.25;max-width:26ch}
   #s0 .photo{position:relative;height:min(78vh,720px);border-radius:28px;overflow:hidden;background:var(--leaf-500);opacity:0;transform:scale(.96);box-shadow:0 30px 60px -30px rgba(10,33,31,.4)}
   #s0.active .photo{animation:pop .9s .15s cubic-bezier(.2,.7,.2,1) forwards}
   #s0 .photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
@@ -88,7 +88,10 @@
   #s9 .c1{font-size:clamp(1.9rem,4.2vw,3.9rem);font-weight:500;max-width:20ch;line-height:1.02}
   #s9 .c2{margin-top:.7rem;font-size:clamp(1.4rem,2.8vw,2.5rem);font-weight:500;max-width:26ch;line-height:1.12}
 
-  #s4{display:flex;flex-direction:column;justify-content:center}
+  #s4{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,4vw,3.8rem);align-items:center}
+  #s4 .col{display:flex;flex-direction:column;min-width:0}
+  #s4 .reel{aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1.5px solid rgba(10,33,31,.18);box-shadow:0 20px 44px -28px rgba(10,33,31,.5);background:#000}
+  #s4 .reel iframe,#s4 .reel video{width:100%;height:100%;display:block;border:0;object-fit:cover}
   #s4 .oneliner{font-size:clamp(1.5rem,3vw,2.7rem);font-weight:500;max-width:24ch;line-height:1.04;margin-top:.4rem}
   #s4 .oneliner .serif{color:var(--spark-900)}
   #s4 .support{margin-top:clamp(.9rem,1.8vw,1.3rem);font-size:clamp(1rem,1.4vw,1.4rem);color:var(--pine-100);max-width:52ch;line-height:1.38;font-weight:500}
@@ -258,12 +261,17 @@
   </section>
 
   <section class="slide" id="s4">
-    <div class="eyebrow">Some context on who we are</div>
+    <div class="col">
+      <div class="eyebrow">Some context on who we are</div>
     <div class="oneliner" data-r style="animation-delay:.25s">Superside is the world's leading <span class="serif">AI-first</span> creative partner.</div>
     <p class="support" data-r style="animation-delay:.6s">We help in-house teams at brands like Intuit, Amazon, DoorDash, Figma, and Reddit scale on-brand creative that delivers, pairing world-class human talent with AI-first workflows and a Brand Brain that gets smarter with every project.</p>
     <div class="stats">
       <div class="stat" data-r style="animation-delay:.85s"><div class="num">850+</div><div class="lbl">Supersiders across 70+ countries, fully remote, no offices</div></div>
       <div class="stat" data-r style="animation-delay:1.15s"><div class="num">12,000+</div><div class="lbl">AI-powered projects delivered</div></div>
+      </div>
+    </div>
+    <div class="reel" data-r style="animation-delay:.9s">
+      <video src="showreel.mp4" autoplay loop muted playsinline></video>
     </div>
   </section>
 
