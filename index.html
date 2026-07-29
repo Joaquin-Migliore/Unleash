@@ -62,6 +62,8 @@
   .divider .dtitle .serif{color:var(--spark)}
   .divider .dsub{margin-top:1.4rem;font-size:var(--step-body);color:rgba(247,249,242,.72);max-width:46ch;font-weight:500;line-height:1.3}
   .divider .dsub .serif{color:var(--spark)}
+  .divider .dsub2{margin-top:1rem;font-size:var(--step-body);color:rgba(247,249,242,.72);max-width:48ch;font-weight:500;line-height:1.3}
+  .divider .dsub2 .serif{color:var(--spark)}
 
   #s1{display:flex;flex-direction:column;justify-content:center}
   #s1 .prompt{position:relative;z-index:3}
@@ -193,6 +195,19 @@
   #ag .row{display:flex;align-items:baseline;gap:clamp(1rem,2.5vw,2rem);padding:clamp(.8rem,1.7vw,1.3rem) 0;border-bottom:1px solid rgba(10,33,31,.16)}
   #ag .rnum{font-family:var(--font-serif);font-style:italic;color:var(--spark-900);font-size:clamp(1.5rem,2.6vw,2.4rem);line-height:1;flex:none;min-width:2ch}
   #ag .rtitle{font-weight:500;color:var(--pine);font-size:clamp(1.4rem,2.7vw,2.5rem);line-height:1.05}
+  #ex2 .exlead{max-width:46ch}
+  #ex2 .exlead2{margin-top:clamp(.9rem,2vw,1.4rem);font-size:var(--step-body);color:var(--pine);font-weight:500;max-width:44ch;line-height:1.3}
+  #ex2 .exnote{margin-top:clamp(.7rem,1.6vw,1.1rem);font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,1.4vw,1.4rem);color:var(--leaf-300)}
+  .ops2{display:flex;flex-direction:column;justify-content:center;gap:clamp(1.4rem,3.5vh,2.6rem)}
+  .ops2 .eyebrow{margin-bottom:clamp(.3rem,1vh,.8rem)}
+  .ops-row{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(1.4rem,3vw,3rem);align-items:center}
+  .ops-row .oname{font-weight:600;font-size:clamp(1.2rem,2vw,1.75rem);color:var(--pine);line-height:1.05}
+  .ops-row .osmall{font-size:clamp(.72rem,.95vw,.9rem);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf-300);margin-top:.15rem}
+  .ops-row .odesc{margin-top:.55rem;font-size:clamp(.95rem,1.2vw,1.2rem);color:var(--pine-100);line-height:1.35;max-width:36ch}
+  .ops-row .oshot{height:clamp(150px,25vh,232px);aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1.5px solid rgba(10,33,31,.18);box-shadow:0 16px 34px -26px rgba(10,33,31,.45);background:var(--cloud-200);position:relative;justify-self:end}
+  .ops-row .oshot video,.ops-row .oshot img{width:100%;height:100%;object-fit:cover;display:block}
+  .ops-row .oshot .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;color:var(--leaf-300);font-family:var(--font-serif);font-style:italic;font-size:clamp(.85rem,1.1vw,1.05rem)}
+  .ops-row .oshot .ph b{font-family:var(--font-display);font-style:normal;font-weight:600;color:var(--pine)}
 </style>
 </head>
 <body>
@@ -337,6 +352,7 @@
     <div class="dnum" data-r style="animation-delay:.1s">03</div>
     <div class="dtitle" data-r style="animation-delay:.3s">AI HR <span class="serif">experiments</span></div>
     <div class="dsub" data-r style="animation-delay:.6s">Inspired by what the company was doing, we broke our own AI paralysis and started building, one small experiment at a time, each one to iterate on and grow if it proved successful.</div>
+    <div class="dsub2" data-r style="animation-delay:.9s">We're sharing a few here in the hope they inspire you to start building too. Most were <span class="serif">actually quite simple to set up.</span></div>
   </section>
 
   <section class="slide" id="s16">
@@ -441,6 +457,62 @@
     </div>
   </section>
 
+  <section class="slide exintro" id="ex2">
+    <div class="eyebrow">Experiment</div>
+    <div class="exnum" data-r style="animation-delay:.15s">02</div>
+    <h2 class="extitle" data-r style="animation-delay:.4s">Ops bets</h2>
+    <p class="exlead" data-r style="animation-delay:.75s">As Superside grew, People Ops set out to scale impact without scaling headcount. So they built a stack of automations, letting a small team operate at scale, with impact far beyond its size.</p>
+    <p class="exlead2" data-r style="animation-delay:1.05s">Proof that AI isn't just fancy visuals. Its biggest wins are often quiet background work, code that makes a <span class="hl">real difference.</span></p>
+    <p class="exnote" data-r style="animation-delay:1.3s">These are just a few examples.</p>
+  </section>
+
+  <section class="slide exp split" id="opsA">
+    <div class="col">
+      <div class="eyebrow">Experiment 02 &middot; Ops bets</div>
+      <h2 class="etitle" data-r style="animation-delay:.25s">Meetup <span class="serif">pairing.</span></h2>
+      <p class="ebody" data-r style="animation-delay:.5s">We are fully remote, with Supersiders in 70+ countries and no offices, but we still want to incentivize real human connection. We pay Supersiders who meet in person for the first time in a year, as long as they live in different countries and post a photo of the meetup in a Slack channel.</p>
+      <p class="ebody2" data-r style="animation-delay:.9s">The team used AI to build an Apps Script that auto-extracts every meetup post into a sheet, pairs everyone in the message, checks each pair against the policy, and, when eligible, prepares the monthly reimbursement summary for payroll. Fully automatic. The team just reviews the flags.</p>
+    </div>
+    <div class="shot" data-r style="animation-delay:.6s">
+      <video src="ops-meetups.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </section>
+
+  <section class="slide exp split" id="opsB">
+    <div class="col">
+      <div class="eyebrow">Experiment 02 &middot; Ops bets</div>
+      <h2 class="etitle" data-r style="animation-delay:.25s">2FA <span class="serif">Slack bot.</span></h2>
+      <p class="ebody" data-r style="animation-delay:.45s">2FA and password resets mean a lot of ad-hoc back-and-forth for People Ops, our SOC-2 policy requires a manager to verify the person's identity before any reset. So the team built a bot to speed that up.</p>
+      <p class="ebody2" data-r style="animation-delay:.75s">Anyone messages it in Slack and it runs the whole intake: who it's for, confirming a manager did the identity check, and the details, then posts a clean request to People Ops with a written record.</p>
+      <p class="ebody2" data-r style="animation-delay:1.05s">And it makes zero LLM calls, completely <span class="serif">token-free.</span> AI only wrote the code. The bot is plain deterministic logic in an always-on web app.</p>
+    </div>
+    <div class="shot" data-r style="animation-delay:.6s">
+      <video src="ops-2fa.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </section>
+
+  <section class="slide exp split" id="opsC">
+    <div class="col">
+      <div class="eyebrow">Experiment 02 &middot; Ops bets</div>
+      <h2 class="etitle" data-r style="animation-delay:.25s">Full ops <span class="serif">auditor.</span></h2>
+      <p class="ebody" data-r style="animation-delay:.5s">Audits our People data for compliance and consistency, running dozens of checks and flagging anything off.</p>
+    </div>
+    <div class="shot" data-r style="animation-delay:.6s">
+      <div class="ph"><span>Demo &middot; drop <b>ops-auditor.mp4</b></span></div>
+    </div>
+  </section>
+
+  <section class="slide exp split" id="opsD">
+    <div class="col">
+      <div class="eyebrow">Experiment 02 &middot; Ops bets</div>
+      <h2 class="etitle" data-r style="animation-delay:.25s">Events <span class="serif">scheduler.</span></h2>
+      <p class="ebody" data-r style="animation-delay:.5s">Turns a control sheet into scheduled Calendar events and guest invites for bootcamp and onboarding, in one run.</p>
+    </div>
+    <div class="shot" data-r style="animation-delay:.6s">
+      <div class="ph"><span>Demo &middot; drop <b>ops-events.mp4</b></span></div>
+    </div>
+  </section>
+
   <section class="slide dark divider" id="dwip">
     <div class="wip">Under construction</div>
     <div class="dtitle" data-r style="animation-delay:.3s">Ideas &amp; <span class="serif">under construction</span></div>
@@ -519,6 +591,13 @@ function show(n){
   var dark=slides[idx].classList.contains('dark');
   document.body.classList.toggle('ondark',dark);
   document.body.style.background = dark ? 'var(--pine)' : 'var(--cloud)';
+  slides.forEach(function(s,i){
+    var vids=s.querySelectorAll('video');
+    for(var k=0;k<vids.length;k++){
+      if(i===idx){ try{ vids[k].currentTime=0; vids[k].play(); }catch(e){} }
+      else { try{ vids[k].pause(); }catch(e){} }
+    }
+  });
 }
 function next(){show(idx+1);} function prev(){show(idx-1);}
 document.addEventListener('keydown',function(e){
