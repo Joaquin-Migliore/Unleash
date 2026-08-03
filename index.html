@@ -186,6 +186,8 @@
   .shot .ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:clamp(180px,30vh,300px);color:var(--leaf-300);font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,1.5vw,1.4rem);padding:1.6rem;background:var(--cloud-200)}
   .shot .ph b{font-family:var(--font-display);font-style:normal;font-weight:600;color:var(--pine)}
   .exp .cap{margin-top:.6rem;font-family:var(--font-serif);font-style:italic;font-size:clamp(.82rem,1vw,1.05rem);color:var(--leaf-300)}
+  .exp .cbig{font-weight:500;line-height:1.02;font-size:clamp(2rem,4.4vw,3.7rem);max-width:20ch}
+  .exp .cbig .serif{color:var(--spark-900)}
   .exintro{display:flex;flex-direction:column;justify-content:center}
   .exintro .exnum{font-family:var(--font-serif);font-style:italic;font-size:clamp(3.5rem,10vw,8.5rem);color:var(--spark-900);line-height:.85}
   .exintro .extitle{font-weight:500;font-size:clamp(2rem,4.6vw,4.2rem);color:var(--pine);max-width:18ch;line-height:1.0;margin-top:.2rem}
@@ -495,8 +497,8 @@
     <div class="col">
       <div class="eyebrow">Experiment 02 &middot; Ops bets</div>
       <h2 class="etitle" data-r style="animation-delay:.25s">Full ops <span class="serif">auditor.</span></h2>
-      <p class="ebody" data-r style="animation-delay:.45s">People Ops are the custodians of our people data. That means proactively auditing all 850 Supersiders across dozens of attributes and several platforms, Personio, Superside, Slack, Google Groups, to catch issues before they turn into problems. The tricky part: the "correct" state doesn't live in any single system, it lives in human judgment against criteria sheets. So it was all done by hand, and a single full pass took the better part of a year, often stale by the time it finished.</p>
-      <p class="ebody2" data-r style="animation-delay:.9s">So they built an auditor that reconciles every person against those criteria and logs only the discrepancies. It runs on Claude in Cowork: an Opus model does the judgment, deterministic Python does the matching across all 850, and it learns from accepted exceptions. The whole company is now audited <span class="serif">every two weeks, not once a year.</span></p>
+      <p class="ebody" data-r style="animation-delay:.45s">People Ops are the custodians of our people data: 850 profiles and dozens of attributes, spread across Personio, Superspace, Slack, and Google Groups. The catch is that the "correct" state doesn't live in any system, it lives in human judgment against criteria sheets. So auditing it was manual, and a full pass took the better part of a year, often stale before it finished.</p>
+      <p class="ebody2" data-r style="animation-delay:.9s">So they built an auditor that checks every person against those criteria and logs only the discrepancies. It runs on Claude in Cowork: Opus does the judgment, deterministic Python matches all 850, and it learns from accepted exceptions. The whole company is now audited <span class="serif">every two weeks, not once a year.</span></p>
     </div>
     <div class="shot" data-r style="animation-delay:.6s">
       <video src="ops-auditor.mp4" autoplay loop muted playsinline></video>
@@ -511,15 +513,23 @@
     <p class="exlead2" data-r style="animation-delay:1.05s">AI in the flow of work: an advisor anyone can ask, recognition in Slack, and culture you can <span class="hl">click through.</span></p>
   </section>
 
+  <section class="slide exp" id="guruProb">
+    <div class="eyebrow">Experiment 03 &middot; People Guru</div>
+    <h2 class="etitle" data-r style="animation-delay:.25s">Good people guidance didn't <span class="serif">scale.</span></h2>
+    <p class="ebody" data-r style="animation-delay:.5s">Directors and above have a dedicated People Success Partner to coach them through the hard calls. Every other Supersider doesn't.</p>
+    <p class="ebody2" data-r style="animation-delay:.9s">The know-how exists, years of it, but it's scattered across countless Notion pages and best-practice docs that managers rarely find in the moment they actually need them.</p>
+  </section>
+
   <section class="slide exp split" id="hrbp">
     <div class="col">
-      <div class="eyebrow">Experiment 03 &middot; People-facing bets</div>
-      <h2 class="etitle" data-r style="animation-delay:.25s">The AI <span class="serif">HRBP.</span></h2>
-      <p class="ebody" data-r style="animation-delay:.45s">An HR business partner trained on our policies, processes, and best practices, that anyone can consult in plain language. It runs on subagents, a SAR guru, a policy approver, and more, each carrying the hard-won judgment we baked in from real cases.</p>
-      <p class="ebody2" data-r style="animation-delay:.9s">And it doesn't just answer, it <span class="serif">acts.</span> Through the Personio and Asana MCPs it can open tickets and make changes directly. We grew it iteratively, and as it got more consultative, asking better questions instead of assuming, the audience using it kept growing.</p>
+      <div class="eyebrow">Experiment 03 &middot; People Guru</div>
+      <h2 class="etitle" data-r style="animation-delay:.25s">People <span class="serif">Guru.</span></h2>
+      <p class="ebody" data-r style="animation-delay:.45s">A one-click Claude plugin, thoroughly trained on our policies, processes, and years of HRBP experience, shaped with pilot groups to nail the consultative tone Supersiders wanted and kept inside our HR AI policy guardrails.</p>
+      <p class="ebody2" data-r style="animation-delay:.8s">Its 10 skills cover every moment of the journey, from onboarding to PIPs, change management, PTO and comp strategy, even walking someone through a performance review.</p>
+      <p class="ebody2" data-r style="animation-delay:1.1s">The Asana MCP lets it file People Ops tickets, and the Personio MCP means it instantly knows who it's talking to, IC or manager, their team, and their comp and performance history. Next up, <span class="serif">Slack-native.</span></p>
     </div>
     <div class="shot" data-r style="animation-delay:.6s">
-      <div class="ph"><span>Demo &middot; drop <b>hrbp.mp4</b></span></div>
+      <video src="hrbp.mp4" autoplay loop muted playsinline></video>
     </div>
   </section>
 
@@ -538,7 +548,8 @@
     <div class="col">
       <div class="eyebrow">Experiment 03 &middot; People-facing bets</div>
       <h2 class="etitle" data-r style="animation-delay:.25s">Culture, <span class="serif">toolified.</span></h2>
-      <p class="ebody" data-r style="animation-delay:.5s">Some training just doesn't land as a deck or a doc. So we turned it into a tool, a culture map people click through instead of read. That's toolification: make it interactive, and suddenly people engage with what they used to skip.</p>
+      <p class="ebody" data-r style="animation-delay:.5s">We trained our leaders on The Culture Map by Erin Meyer. With 85%+ of Supersiders reporting to a manager who doesn't share their nationality, it is a great framework for setting cross-cultural relationships up for success.</p>
+      <p class="ebody2" data-r style="animation-delay:.9s">But it didn't fully land as a book or a deck. So we turned it into a tool, a culture map people click through instead of read. That's toolification: make it interactive, and suddenly people engage with what they used to skip.</p>
     </div>
     <div class="shot" data-r style="animation-delay:.6s">
       <video src="culture.mp4" autoplay loop muted playsinline></video>
@@ -549,6 +560,24 @@
     <div class="dnum" data-r style="animation-delay:.1s">04</div>
     <div class="dtitle" data-r style="animation-delay:.3s">Learnings &amp; <span class="serif">conclusion</span></div>
     <div class="dsub" data-r style="animation-delay:.6s">What all of this taught us, and where it leaves us.</div>
+  </section>
+
+  <section class="slide exp" id="c1">
+    <h2 class="cbig" data-r style="animation-delay:.2s">None of it was <span class="serif">magic.</span></h2>
+    <p class="ebody" data-r style="animation-delay:.55s">I just showed you a pile of shiny AI things, maybe the exact stuff that made you feel behind fifteen minutes ago.</p>
+    <p class="ebody2" data-r style="animation-delay:.95s">But none of it started big, none of it needed an engineer, and plenty of it flopped. Every one was just a small experiment.</p>
+  </section>
+
+  <section class="slide exp" id="c2">
+    <h2 class="cbig" data-r style="animation-delay:.2s">The goal was never AI everywhere. It was <span class="serif">better work.</span></h2>
+    <p class="ebody" data-r style="animation-delay:.55s">Some AI is genuinely magical. Some is expensive overkill, and the real skill is telling them apart.</p>
+    <p class="ebody2" data-r style="animation-delay:.95s">Not every workflow needs an LLM brain. Plenty of the time, plain rules, automations, templates, and clean process win. Tokens add up fast, so we save the model for where it truly earns its place.</p>
+  </section>
+
+  <section class="slide exp" id="c3">
+    <h2 class="cbig" data-r style="animation-delay:.2s">Someone will always do it better. <span class="serif">Do it anyway.</span></h2>
+    <p class="ebody" data-r style="animation-delay:.55s">It took some courage to stand here. The whole time I kept thinking, what if someone in this room is doing one of these ten times better? Probably. There's always someone cleverer.</p>
+    <p class="ebody2" data-r style="animation-delay:.95s">Learn from them, but don't let it freeze you. The real shift is trying the thing you assumed was impossible, and seeing not a finished product, but progress you can build on. That part gets a little addictive.</p>
   </section>
 
   <section class="slide" id="s8">
